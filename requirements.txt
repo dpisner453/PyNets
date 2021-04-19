@@ -7,7 +7,7 @@ sphinx-rtd-theme>=0.4.3
 numpydoc>=0.8.0
 docutils>=0.14.0
 requests>=2.21
-joblib>=0.13.2
+joblib>=0.17.0
 pandas>=0.24.2
 psutil>=5.6.1
 scipy>=1.4.1
@@ -37,3 +37,6 @@ git+https://github.com/dPys/deepbrain.git@master
 urllib3>=1.25.4
 mplcyberpunk>=0.1.11
 numba>=0.51.2
+anytree==2.8.0
+gensim==3.8.3
+graspy==0.3.0
