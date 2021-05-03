@@ -29,7 +29,7 @@ def countmotifs(A, N=4):
 
     Returns
     -------
-    umotifs : int
+    umotifs : Counter
         Total count of size N motifs for graph A.
 
     References
@@ -57,7 +57,7 @@ def countmotifs(A, N=4):
         if len(X2) > 0:
             X2 = np.vstack(X2)
         else:
-            umotifs = 0
+            umotifs = Counter([])
             return umotifs
 
     X2 = np.sort(X2, 1)
@@ -143,9 +143,10 @@ def compare_motifs(struct_mat, func_mat, name, namer_dir, bins=20, N=4):
 
     Returns
     -------
-    mf : ndarray
-        1D vector listing the total motifs of size N for each
-        class of mlib.
+    mg_dict : dict
+
+    g_dict : dict
+        
 
     References
     ----------
