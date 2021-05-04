@@ -41,7 +41,34 @@ def batch_submit(
 ):
     """Searches through an S3 bucket, gets all subject-ids, creates json
     files for each, submits batch jobs, and returns list of job ids to query
-    status upon later."""
+    status upon later.
+
+    Parameters
+    __________
+
+    bucket : str
+        s3 bucket
+    dataset,
+    push_dir,
+    modality,
+    participant_label,
+    session_label,
+    user_atlas,
+    cluster_mask,
+    roi : str
+        File path to binarized/boolean region-of-interest Nifti1Image file
+    ref : str
+        File path to reference Nifti1Image to use as the target for alignment.
+    way,
+    plugin,
+    resources,
+    working_dir : str
+        Path to the working directory to perform SyN and save outputs
+    verbose,
+    jobdir : str
+        Directory of batch jobs to generate/check up on credentials
+
+    """
 
     print(f"Getting list from s3://{bucket}/{dataset}/...")
     seshs = crawl_bucket(bucket, dataset, jobdir)
